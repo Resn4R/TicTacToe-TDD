@@ -9,8 +9,9 @@ import Foundation
 
 struct TicTacToe {
     
-    private var grid = [[""]]
+    private var grid: [[String]] = Array(repeating: Array(repeating: "", count: 3), count: 3)
     private var isFirstMove = true
+    private var previousMove = ""
     
     func getGrid() -> [[String]] {
         grid
@@ -18,9 +19,11 @@ struct TicTacToe {
     
     mutating func place(symbol: String, in location: (row: Int, col: Int)) {
         
-        guard firstMoveIsX(symbol) else { return }
+        if isFirstMove { guard firstMoveIsX(symbol) else { return } }
+        guard checkAlternate(symbol: symbol) else { return }
         
-        grid[location.row][location.col] = symbol        
+        grid[location.row][location.col] = symbol
+        previousMove = symbol
     }
     
     private mutating func firstMoveIsX(_ symbol: String) -> Bool {
@@ -30,6 +33,11 @@ struct TicTacToe {
             return true
         }
         else { return false }
+    }
+    
+    private mutating func checkAlternate(symbol: String) -> Bool {
+        if isFirstMove { true }
+        else { symbol == previousMove ? false : true }
     }
 
 }

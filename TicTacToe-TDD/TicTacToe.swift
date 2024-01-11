@@ -10,15 +10,26 @@ import Foundation
 struct TicTacToe {
     
     private var grid = [[""]]
+    private var isFirstMove = true
     
     func getGrid() -> [[String]] {
         grid
     }
     
     mutating func place(symbol: String, in location: (row: Int, col: Int)) {
-        grid[location.row][location.col] = symbol
+        
+        guard firstMoveIsX(symbol) else { return }
+        
+        grid[location.row][location.col] = symbol        
     }
     
-    
+    private mutating func firstMoveIsX(_ symbol: String) -> Bool {
+        
+        if isFirstMove && symbol == "X" {
+            isFirstMove = false
+            return true
+        }
+        else { return false }
+    }
 
 }

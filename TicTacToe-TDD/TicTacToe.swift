@@ -20,6 +20,7 @@ struct TicTacToe {
     mutating func place(symbol: String, in location: (row: Int, col: Int)) {
         
         if isFirstMove { guard firstMoveIsX(symbol) else { return } }
+        guard isPositionAvailable(location) else { return }
         guard checkAlternate(symbol: symbol) else { return }
         
         grid[location.row][location.col] = symbol
@@ -39,5 +40,6 @@ struct TicTacToe {
         if isFirstMove { true }
         else { symbol == previousMove ? false : true }
     }
-
+    
+    private func isPositionAvailable(_ position: (row: Int, col: Int)) -> Bool { grid[position.row][position.col].isEmpty ? true : false }
 }

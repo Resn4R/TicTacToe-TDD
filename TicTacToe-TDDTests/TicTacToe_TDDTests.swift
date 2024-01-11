@@ -49,4 +49,13 @@ final class TicTacToe_TDDTests: XCTestCase {
         
         XCTAssertEqual(sampleGame.getGrid(), [["X","O",""],["","",""],["","",""]])
     }
+    
+    func testPlayOnOccupiedPosition() {
+        var sampleGame = TicTacToe()
+                
+        sampleGame.place(symbol: "X", in: (0,0))
+        sampleGame.place(symbol: "O", in: (0,0))
+        
+        XCTAssertEqual(sampleGame.getGrid(), [["X","",""],["","",""],["","",""]])
+    }
 }

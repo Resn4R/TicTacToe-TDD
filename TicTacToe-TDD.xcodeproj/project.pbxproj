@@ -14,6 +14,7 @@
 		4FBB55DF2B506F77002695D2 /* TicTacToe_TDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB55DE2B506F77002695D2 /* TicTacToe_TDDTests.swift */; };
 		4FBB55E92B506F77002695D2 /* TicTacToe_TDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB55E82B506F77002695D2 /* TicTacToe_TDDUITests.swift */; };
 		4FBB55EB2B506F77002695D2 /* TicTacToe_TDDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB55EA2B506F77002695D2 /* TicTacToe_TDDUITestsLaunchTests.swift */; };
+		4FBB55F82B507018002695D2 /* TicTacToe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB55F72B507018002695D2 /* TicTacToe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		4FBB55E42B506F77002695D2 /* TicTacToe-TDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TicTacToe-TDDUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBB55E82B506F77002695D2 /* TicTacToe_TDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe_TDDUITests.swift; sourceTree = "<group>"; };
 		4FBB55EA2B506F77002695D2 /* TicTacToe_TDDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe_TDDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4FBB55F72B507018002695D2 /* TicTacToe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				4FBB55CD2B506F76002695D2 /* TicTacToe_TDDApp.swift */,
 				4FBB55CF2B506F76002695D2 /* ContentView.swift */,
+				4FBB55F72B507018002695D2 /* TicTacToe.swift */,
 				4FBB55D12B506F77002695D2 /* Assets.xcassets */,
 				4FBB55D32B506F77002695D2 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FBB55D02B506F76002695D2 /* ContentView.swift in Sources */,
+				4FBB55F82B507018002695D2 /* TicTacToe.swift in Sources */,
 				4FBB55CE2B506F76002695D2 /* TicTacToe_TDDApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,8 +22,13 @@ final class TicTacToe_TDDTests: XCTestCase {
     }
     
     func testADDSymbolToGrid() {
-        let sampleGrid = TicTacToe().spawnGrid()
+        var sampleGame = TicTacToe()
+        let sampleGrid = sampleGame.getGrid()
         
         let symbol = "X"
+        
+        sampleGame.place(symbol: symbol, in: (0,0))
+        
+        XCTAssertEqual(sampleGame.getGrid(), [["X"]])
     }
 }

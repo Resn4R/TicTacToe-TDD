@@ -15,7 +15,9 @@ struct TicTacToe {
         grid
     }
     
-    func place(symbol: String, in location: (Int, Int)) {
+    mutating func place(symbol: String, in location: (row: Int, col: Int)) {
+        grid[location.row][location.col] = symbol
+    }
     
     
 
